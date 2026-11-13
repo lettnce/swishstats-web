@@ -14,7 +14,7 @@ const [loading, setLoading] = useState(false);
     setResponse("");
 
     try {
-      const res = await fetch(`https://localhost:5000/ask`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
